@@ -6,10 +6,10 @@ Focus on Python and SQL.
 
 Top 3 Resources
 **Data Lemur**
-[title] (https://datalemur.com/)
+[link](https://datalemur.com/)
 
 **LeetCode**
-[title](https://leetcode.com/)
+[link](https://leetcode.com/)
 
 **HackerRank**
-[title](https://www.hackerrank.com/)
+[link](https://www.hackerrank.com/)

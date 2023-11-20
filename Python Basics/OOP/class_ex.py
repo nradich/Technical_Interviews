@@ -17,12 +17,17 @@ class Employee:
         self.salary += self.salary * (percent/100)
 
     #going from employee to self as the lone parameter
-    def employee_info(self):
+    def __str__(self):
         """Method"""
-        print(f"{self.name} is {self.age} years old. Employee is a {self.position} with the salary of ${self.salary}")
-
+        return(f"{self.name} is {self.age} years old. Employee is a {self.position} with the salary of ${self.salary}")
+    
+    def __repr__(self) -> str:
+        return (
+        f"Employee({repr(self.name)} , {repr(self.age)},"
+        f"{repr(self.position)},  {repr(self.salary)})")
 #e1 = Employee()
 e2 = Employee('Jonathan', 20, 'typer', 125)
 e3 = Employee('yogi', 25, 'dawg', 50)
 e3.increase_salary( 25)
-e3.employee_info()
+print(e3)
+print(repr(e3))

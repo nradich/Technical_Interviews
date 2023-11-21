@@ -85,3 +85,8 @@ memory optimization, cannot add new attributions
 is very complex, 
 
 #### Accessing Class and Methods
+can define variables within the class and refernece them throughout the class
+for example, a minimum wage at the highest class level ,and then adjust at the subclass level
+
+#### Instance method vs class method 
+would use a class method decorator, signified by cls

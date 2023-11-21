@@ -48,6 +48,17 @@ class Employee:
 
 #Working on Inheritance
 class NewEmployee:
+    organization = "Business_Unit"
+    minimum_wage = 1000
+
+
+    @classmethod
+    def change_minimum_wage(cls, new_wage):
+        """Class method restricting the min wage """
+        if new_wage > 3000:
+            raise ValueError("Company has no money")
+        cls.minimum_wage = new_wage
+
     def __init__(self, name, age, salary):
         self.name = name
         self.age = age
@@ -60,6 +71,7 @@ class NewEmployee:
         self.salary += self.salary * (percent/100)
 
 class Tester(NewEmployee):
+    organization = "tester"
     def run_test(self):
         print(f"Testing is started by {self.name}")
         print("Tests are done.")
@@ -71,7 +83,7 @@ class Tester(NewEmployee):
         self.salary += self.salary * ((percent+5)/100)
 
 class Developer(NewEmployee):
-    def increase_salary(self, percent, bonus):
+    def increase_salary(self, percent):
         """Function within employee class, not in the global"""
         #the += allows us to add the product of the right hand side of the equal sign to the left 
         #don't access the same as dictionaries
@@ -87,7 +99,10 @@ hazel.increase_salary(20)
 print(f"Homer's salary is {homer.salary}")
 print(f"Hazel's salary is {hazel.salary}")
 
+print(f"Homer's organization is {homer.organization}")
+print(f"Hazel's organization is {hazel.organization}")
 
+hazel.change_minimum_wage(500000)
 
 #e1 = Employee()
 e2 = Employee('Jonathan', 20, 'typer', 1100)

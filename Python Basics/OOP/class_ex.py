@@ -44,6 +44,49 @@ class Employee:
         ## self.annual_salary = salary * 12
         #or could calculate it
         return self.salary * 12  
+    
+
+#Working on Inheritance
+class NewEmployee:
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+    
+    def increase_salary(self, percent):
+        """Function within employee class, not in the global"""
+        #the += allows us to add the product of the right hand side of the equal sign to the left 
+        #don't access the same as dictionaries
+        self.salary += self.salary * (percent/100)
+
+class Tester(NewEmployee):
+    def run_test(self):
+        print(f"Testing is started by {self.name}")
+        print("Tests are done.")
+
+    def increase_salary(self, percent):
+        """Function within employee class, not in the global"""
+        #the += allows us to add the product of the right hand side of the equal sign to the left 
+        #don't access the same as dictionaries
+        self.salary += self.salary * ((percent+5)/100)
+
+class Developer(NewEmployee):
+    def increase_salary(self, percent, bonus):
+        """Function within employee class, not in the global"""
+        #the += allows us to add the product of the right hand side of the equal sign to the left 
+        #don't access the same as dictionaries
+        self.salary += self.salary * (percent/100)
+
+#setting the new epmployee as a tester, ie their role
+homer = Tester("Homer", 25, 2000)
+hazel = Developer("Hazel", 30, 2000)
+homer.increase_salary(20)
+print(homer.salary)
+homer.increase_salary(20)
+hazel.increase_salary(20)
+print(f"Homer's salary is {homer.salary}")
+print(f"Hazel's salary is {hazel.salary}")
+
 
 
 #e1 = Employee()

@@ -62,3 +62,26 @@ harder to hide attributes from public, could use name mangling with double under
 could use the '@property' 
 a property works like read only, can leave out of the parathensis. 
 essentially by eliminating the parenthesis, can't have people input new values 
+
+
+#### Class Inheritance
+DRY, don't repeat yourself 
+can go very general ie class person could feed to both employee and client classes
+parent and child classes 
+
+`class Tester(NewEmployee):` feeding the new class the super class, it will inherit all of those attributes 
+
+Method overriding, even though the increase salary functionw wasn't in the particular class, the program was able to find it in the super class. So could have different nuances to each sub class
+Could define the same function in two difference classes with different operations 
+
+can see if its isinstance or issubclass to see whats going on with the class
+
+the use of super() within a class definition allows the higher class to call the function 
+
+##### slots
+memory optimization, cannot add new attributions 
+
+##### Multiple Inheritance
+is very complex, 
+
+#### Accessing Class and Methods

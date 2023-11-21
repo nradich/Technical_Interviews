@@ -32,3 +32,33 @@ the eval function, globally available, allows for python to intepret a string as
 ie eval("2+2"), we would want the repr function from our class to be able to be easily inserted into this
 The repr function should allow you to create a new instance of the class from the eval function
 ie eval(repr(new_variable))
+
+
+Dunder methods, dunder underscore 
+
+#### Managing Attribute Access
+using special function to get and set new values 
+
+would use at the __init__ portion of the class as well 
+
+`    def __init__(self, name, age, position, salary):
+        self.name = name
+        self.age = age
+        self.position = position
+        self.set_salary(salary) `
+example of having setter function within the init portion 
+
+
+##### Abstraction
+- displaying only basic info, hiding details 
+
+##### Encapsulation
+- group related data in one logical unit 
+- hide data attributes 
+
+harder to hide attributes from public, could use name mangling with double underscore to truly hide.
+
+#### Class decorators
+could use the '@property' 
+a property works like read only, can leave out of the parathensis. 
+essentially by eliminating the parenthesis, can't have people input new values 

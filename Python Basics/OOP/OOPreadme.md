@@ -90,3 +90,10 @@ for example, a minimum wage at the highest class level ,and then adjust at the s
 
 #### Instance method vs class method 
 would use a class method decorator, signified by cls
+
+#### Data Classes 
+composition, having classes define attributes within other classes 
+
+#### Type Hints
+helping to define what the data types
+mypy is a good library to double check data type castings

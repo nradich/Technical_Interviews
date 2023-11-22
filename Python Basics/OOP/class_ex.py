@@ -89,6 +89,28 @@ class Developer(NewEmployee):
         #don't access the same as dictionaries
         self.salary += self.salary * (percent/100)
 
+
+#Data classes
+from dataclasses import dataclass
+
+@dataclass
+class Team:
+    name:str
+    location:str
+
+class Player:
+    def __init__(self, name: str, position: str, age:int, Team):
+        self.name = name
+        self.position = position
+        self.age = age
+        self.Team = Team
+
+tigers = Team("Tigers", "Detroit")
+tyler = Player("Tyler", "Pitcher", "25",tigers)
+
+
+print(tyler.Team)
+
 #setting the new epmployee as a tester, ie their role
 homer = Tester("Homer", 25, 2000)
 hazel = Developer("Hazel", 30, 2000)
